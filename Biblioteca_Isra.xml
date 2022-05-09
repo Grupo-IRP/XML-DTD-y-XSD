@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE biblioteca SYSTEM "Biblioteca_Isra.dtd">
-<biblioteca>
+<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation= "Biblioteca_isra.xsd">
     <libros>
         <libro id="L0001" tipo_clase="novela" n_paginas="48">
             <titulo_libro >Las doce puertas</titulo_libro>
@@ -46,7 +47,7 @@
         </revista>
     </revistas>
     <periodicos>
-        <periodico id="P0001" tipo_clase="nacional" fecha_publicacion="2022/02/30">
+        <periodico id="P0001" tipo_clase="nacional" fecha_publicacion="2022-02-28">
             <seccion_periodico tipo_seccion="deportes">
                 <articulo autor="J.Perez">
                     <titulo_articulo>El Rayo ficha a Mbappé</titulo_articulo>
