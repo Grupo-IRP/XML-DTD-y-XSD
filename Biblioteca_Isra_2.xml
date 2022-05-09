@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation= "Biblioteca_isra.xsd">
+    <libros>
+        <libro id="L0001" tipo_clase="novela" n_paginas="48">
+            <titulo_libro >Las doce puertas</titulo_libro>
+            <capitulo n_capitulo="01" n_paginas="23">
+                <titulo_capitulo>Así empezó todo</titulo_capitulo>
+                <contenido_capitulo info="enlace" />
+            </capitulo>
+            <capitulo n_capitulo="02" n_paginas="12">
+                <titulo_capitulo>Continúa la historia</titulo_capitulo>
+                <contenido_capitulo info="enlace" />
+            </capitulo>
+            <capitulo n_capitulo="03" n_paginas="7">
+                <titulo_capitulo>El fin de la novela</titulo_capitulo>
+                <contenido_capitulo info="enlace" />
+            </capitulo>
+            <indice> 
+                Así empezó todo pag 3
+                Continúa la historia pag 26
+                El fin de la novela pag 38
+            </indice>
+            <sinopsis>Tres niños deescubren un antiguo secreto judío en el 
+                siglo XIV. Hoy en día, una famosa historiadora debe resolverlo.
+            </sinopsis>
+        </libro>
+    </libros>
+    <revistas>
+        <revista id="R0001" tipo_clase="investigacion" n_paginas="30">
+            <titulo_revista>Muy Interesante</titulo_revista>
+            <numero numero="72"/>
+            <indice>
+                Editorial pag 2
+                Astronomia pag 3
+                Arqueología pag 6
+            </indice>            
+            <seccion_revista n_paginas="3">
+                <nombre>Astronomía</nombre>
+                <contenido_seccion info="enlace"/>
+            </seccion_revista>
+            <seccion_revista n_paginas="1">
+                <nombre>Arqueología</nombre>
+                <contenido_seccion info="enlace"/>
+            </seccion_revista>   
+        </revista>
+    </revistas>
+    <periodicos>
+        <periodico id="P0001" tipo_clase="nacional" fecha_publicacion="2022-02-28">
+            <seccion_periodico tipo_seccion="deportes">
+                <articulo autor="J.Perez">
+                    <titulo_articulo>El Rayo ficha a Mbappé</titulo_articulo>
+                    <contenido_articulo info="enlace"/>
+                </articulo>
+                <articulo autor="Ernesto H.">
+                    <titulo_articulo>Remontada histórica</titulo_articulo>
+                    <contenido_articulo info="enlace"/>
+                </articulo>
+                <articulo autor="Isaac F.">
+                    <titulo_articulo>Hoyo en uno</titulo_articulo>
+                    <contenido_articulo info="enlace"/>
+                </articulo>
+            </seccion_periodico>
+            <seccion_periodico tipo_seccion="opinion">
+                <articulo autor="Hector">
+                    <titulo_articulo>Se contar hasta rojo</titulo_articulo>
+                    <contenido_articulo info="enlace"></contenido_articulo>
+                </articulo>
+            </seccion_periodico>            
+            <indice>
+                Sucesos pag 3
+                Economía pag 6
+                Deportes pag 12
+            </indice>
+        </periodico>
+    </periodicos>    
+</biblioteca>
