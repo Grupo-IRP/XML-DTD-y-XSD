@@ -1,4 +1,6 @@
 <!ELEMENT biblioteca (libros, revistas, periodicos)>
+<!ATTLIST biblioteca xmlns:xsi CDATA #REQUIRED>
+<!ATTLIST biblioteca xsi:noNamespaceSchemaLocation CDATA #REQUIRED>
 
 <!ELEMENT libros (libro*)>
 <!ELEMENT revistas (revista*)>
