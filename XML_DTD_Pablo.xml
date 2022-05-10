@@ -56,7 +56,7 @@
         ]>
         
 <Biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="../XSD/separado.xsd">
+    xsi:noNamespaceSchemaLocation="XSD_Pablo.xsd">
     <libros>
         <libro id="L0001" tipo_clase="novela" paginas="50"> 
             <titulo>El pais del olvido</titulo>
