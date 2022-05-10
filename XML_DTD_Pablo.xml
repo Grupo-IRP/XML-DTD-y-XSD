@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<!DOCTYPE Biblioteca [ 
+        <!-- BIBLIOTECA-->
+        <!ATTLIST Biblioteca xmlns:xsi CDATA #REQUIRED>
+        <!ATTLIST Biblioteca xsi:noNamespaceSchemaLocation CDATA #REQUIRED>
+
+        <!-- LIBROS-->
+        <!ELEMENT Biblioteca (libros|revistas|periodicos)+>
+        <!ELEMENT libros (libro)+>
+        <!ELEMENT libro (titulo|indice|capitulo|sinopsis)+>
+        <!ATTLIST libro
+                id CDATA #REQUIRED
+                paginas CDATA #REQUIRED
+                tipo_clase CDATA #REQUIRED>
+        <!ELEMENT titulo (#PCDATA)>
+        <!ELEMENT indice (#PCDATA)>
+        <!ELEMENT capitulo (titulo|contenido)+>
+        <!ATTLIST capitulo
+                paginas_capitulo CDATA #REQUIRED>
+        <!ELEMENT contenido (#PCDATA)>
+        <!ATTLIST contenido
+                enlace CDATA #REQUIRED>
+        <!ELEMENT sinopsis (#PCDATA)>
+
+        <!-- REVISTAS-->        
+        <!ELEMENT revistas (revista)*>
+        <!ELEMENT revista (titulo|numero_revista|indice_contenido|seccion)*>
+        <!ATTLIST revista
+                id CDATA #REQUIRED
+                paginas CDATA #REQUIRED
+                tipo_clase CDATA #REQUIRED>
+        <!ELEMENT numero_revista (#PCDATA)>
+        <!ELEMENT indice_contenido (#PCDATA)>
+        <!ELEMENT seccion (titulo|contenido|titlo)*>
+        <!ATTLIST seccion
+                paginas_seccion CDATA #REQUIRED>
+        <!ATTLIST contenido
+                enlace CDATA #REQUIRED>
+        <!ELEMENT titlo (#PCDATA)>
+        
+        <!-- PERIODICOS-->
+        <!ELEMENT periodicos (periodico)+>
+        <!ELEMENT periodico (indice|secciones|contenido)+>
+        <!ATTLIST periodico
+                fecha_de_publicacion CDATA #REQUIRED
+                id CDATA #REQUIRED>
+        <!ATTLIST periodico tipo_clase (nacionales | internacionales) #REQUIRED>
+        <!ELEMENT secciones (articulo)+>
+        <!ATTLIST secciones tipo_seccion (economica | opinion | deportes | nacional | internacional) #REQUIRED>
+        <!ELEMENT articulo (#PCDATA)>
+        <!ATTLIST articulo
+                autor CDATA #REQUIRED>
+        ]>
+        
+<Biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../XSD/separado.xsd">
+    <libros>
+        <libro id="L0001" tipo_clase="novela" paginas="50"> 
+            <titulo>El pais del olvido</titulo>
+            <indice>
+                El fin del mundo pag 1-50
+                Destruccion total pag 50-100
+                La grandeza de los olvidados pag 100-150
+                El infierno en la tierra 150-200   
+            </indice>
+
+            <capitulo paginas_capitulo="50">
+                <titulo>El fin del mundo</titulo>
+                <contenido enlace=""></contenido>
+            </capitulo>
+
+            <capitulo paginas_capitulo="50">
+                <titulo>Destruccion total</titulo>
+                <contenido enlace=""></contenido>
+            </capitulo>
+
+            <capitulo paginas_capitulo="50">
+                <titulo>La grandeza de los olvidados</titulo>
+                <contenido enlace=""></contenido>
+            </capitulo>
+            
+            <capitulo paginas_capitulo="50">
+                <titulo>El infierno en la tierra</titulo>
+                <contenido enlace=""></contenido>
+            </capitulo>
+
+            <sinopsis>El infierno se ha desatado en la tierra, solamente un único marine será el encargado de acabar
+                      con las tropas del infierno que han asaltado la tierra</sinopsis>
+        </libro>
+
+        <libro id="L0002" tipo_clase="infantil" paginas="50">
+            <titulo>Alicia: El mundo perdido</titulo>
+            <indice>
+                Un mundo ideal pag 1-20
+                Mis compañeros de viaje pag 20-40
+                Vuelta a casa pag 40-50                 
+            </indice>
+
+            <capitulo paginas_capitulo="20">
+                <titulo> Un mundo ideal</titulo>
+                <contenido enlace=""></contenido>
+            </capitulo>
+
+            <capitulo paginas_capitulo="20">
+                <titulo>Mis compañeros de viaje</titulo>
+                <contenido enlace=""></contenido>
+            </capitulo>
+
+            <capitulo paginas_capitulo="10">
+                <titulo> Vuelta a casa</titulo>
+                <contenido enlace=""></contenido>
+            </capitulo>
+                
+            <sinopsis>Una niña pequeña se pierde por el bosque y llega a un lugar mágico y de fantasía donde tendrá que cooperar
+                      con sus nuevos amigos para volver a su realidad.
+            </sinopsis>
+        </libro>
+
+        <libro id="L0003" tipo_clase="didactico" paginas="50">
+            <titulo>La fábula del zorro</titulo>
+            <indice>
+                El zorro pag 1-20
+                La zorra pag 20-40
+                Torreznos pag 40-50                 
+            </indice>
+
+            <capitulo paginas_capitulo="20">
+                <titulo> Un mundo ideal</titulo>
+                <contenido enlace=""></contenido>
+            </capitulo>
+
+            <capitulo paginas_capitulo="20">
+                <titulo>La zorra</titulo>
+                <contenido enlace=""></contenido>
+            </capitulo>
+
+            <capitulo paginas_capitulo="10">
+                <titulo> Torreznos</titulo>
+                <contenido enlace=""></contenido>
+            </capitulo>
+                
+            <sinopsis>Desplazado de su ciudad natal, el zorro busca su nueva aventura en Madagascar</sinopsis>
+        </libro>
+
+        </libros>
+
+    
+    <revistas>
+
+        <revista id="R0001" tipo_clase="informatica" paginas="40">
+            <titulo>Informatizate</titulo>
+            <numero_revista>69</numero_revista>
+            <indice_contenido>
+                C pag 1-10.
+                C++ pag 10-20.
+                C# pag 20-30.
+                Java pag 30-40.
+            </indice_contenido>
+
+            <seccion paginas_seccion="10">
+                <titulo>C</titulo>
+                <contenido enlace=""></contenido>
+            </seccion>
+
+            <seccion paginas_seccion="10">
+                <titulo>C++</titulo>
+             <contenido enlace=""></contenido>
+            </seccion>
+
+            <seccion paginas_seccion="10">
+                <titulo>C#</titulo>
+            <contenido enlace=""></contenido>
+            </seccion>
+
+            <seccion paginas_seccion="10"> 
+                <titulo>Java</titulo>
+            <contenido enlace=""></contenido>
+            </seccion>
+        </revista>
+
+        <revista id="R0002" tipo_clase="corazon" paginas="40">
+            <titulo>Tu corazón</titulo>
+            <numero_revista>169</numero_revista>
+            <indice_contenido>
+                Nuevo plató en Salvame Deluxe pag 1-10.
+                Chavelita alcanza la fama pag 10-20.
+                Los reality show están comprados pag 20-30.
+                Telecinco pierde toda su audiencia pag 30-40.
+            </indice_contenido>
+
+            <seccion paginas_seccion="10">
+                <titulo> Nuevo plató en Salvame Deluxe</titulo>
+                <contenido enlace=""></contenido>
+            </seccion>
+            
+
+            <seccion paginas_seccion="10">
+                <titulo>Chavelita alcanza la fama</titulo>
+                <contenido enlace=""></contenido>
+            </seccion>
+
+            <seccion paginas_seccion="10">
+                <titulo> Los reality show están comprados</titulo>
+                <contenido enlace=""></contenido>
+            </seccion>
+                
+            <seccion paginas_seccion="10">
+                <titulo>Telecinco pierde toda su audiencia</titulo>     
+                <contenido enlace=""></contenido>
+            </seccion>
+        </revista>
+
+        <revista id="R0003" tipo_clase="coches" paginas="40">
+            <titulo>Motor3.0</titulo>
+            <numero_revista>269</numero_revista>
+            <indice_contenido>
+                Nissan Silvia pag 1-10.
+                Chevrolet Caprice 10-20.
+                Pontiac Gto pag 20-30.
+                Pontiac Firebird pag 30-40.
+            </indice_contenido>
+
+            <seccion paginas_seccion="10">
+                <titulo>Nissan Silvia</titulo>
+                <contenido enlace=""></contenido>
+            </seccion>
+
+            <seccion paginas_seccion="10">
+                <titulo> Chevrolet Caprice</titulo>
+                <contenido enlace=""></contenido>
+            </seccion>
+
+            <seccion paginas_seccion="10">
+                <titulo> Pontiac Gto</titulo>
+                <contenido enlace=""></contenido>
+            </seccion>
+                
+            <seccion paginas_seccion="10">
+                <titulo>Pontiac Firebird</titulo>
+                <contenido enlace=""></contenido>
+            </seccion>
+        </revista>
+
+        <revista id="R0004" tipo_clase="investigacion" paginas="40">
+            <titulo>Están entre nosotros</titulo>
+            <numero_revista>369</numero_revista>
+            <indice_contenido>
+                Ovni sobrevuela California pag 1-10.
+                Todos los secretos del A-51 10-20.
+                Especial Iker Jiménez pag 20-30.
+                Destellos en el cielo pag 30-40.
+            </indice_contenido>
+
+            <seccion paginas_seccion="10">
+                <titulo>Ovni sobrevuela sobre California</titulo>
+                <contenido enlace=""></contenido>
+            </seccion>
+
+            <seccion paginas_seccion="10">
+                <titulo> Todos los secretos del A-51</titulo>
+                <contenido enlace=""></contenido>
+            </seccion>
+
+            <seccion paginas_seccion="10">
+                <titulo>Especial Iker Jiménez</titulo>
+                <contenido enlace=""></contenido>
+            </seccion>
+                
+            <seccion paginas_seccion="10">
+                <titulo>Destellos en el cielo</titulo>
+                <contenido enlace=""></contenido>
+            </seccion>
+        </revista>
+
+        <revista id="R0005" tipo_clase="otra" paginas="30">
+            <titulo>X</titulo>
+            <numero_revista>1</numero_revista>
+            <indice_contenido>
+                69 pag 1-10.
+                Griego 10-20.
+                Fránces pag 20-30.
+            </indice_contenido>
+
+            <seccion paginas_seccion="10">
+                <titlo>69</titlo>
+                <contenido enlace=""></contenido>
+            </seccion>
+
+            <seccion paginas_seccion="10">
+                <titlo>Griego</titlo>
+                <contenido enlace=""></contenido>
+            </seccion>
+
+            <seccion paginas_seccion="10">
+                <titlo>Fránces</titlo> 
+                <contenido enlace=""></contenido>
+            </seccion>
+                
+        </revista>
+
+    </revistas>
+   
+    
+    <periodicos>
+
+        <periodico id="P0001" tipo_clase="internacionales" fecha_de_publicacion="2021-10-20">
+                <indice>
+                    El crack del 29 pag 1-3.
+                    La baba del caracol pag 3-6. 
+                    Real Madrid campeon pag 6-9.
+                    Edix retira el uso de mascarillas en los examenes pag 9-12.
+                    Love is in the air pag 12-15.
+                </indice>
+
+            <secciones tipo_seccion="economica">
+                <articulo autor="Pablo Baldazo">
+                    El crack del 29
+                </articulo>
+            </secciones>
+            <contenido enlace=""></contenido>
+
+            <secciones tipo_seccion="opinion">
+                <articulo autor="Ricardo Alvarado">
+                    La baba del caracol
+                </articulo>
+            </secciones>
+            <contenido enlace=""></contenido>
+
+            <secciones tipo_seccion="deportes">
+                <articulo autor="Pablo Baldazo">
+                    Real Madrid campeón
+                </articulo>
+            </secciones>
+            <contenido enlace=""></contenido>
+
+            <secciones tipo_seccion="nacional">
+                <articulo autor="Daniel Guzman">
+                    Edix retira el uso de mascarillas en los examenes
+                </articulo>
+            </secciones>
+            <contenido enlace=""></contenido>
+
+            <secciones tipo_seccion="internacional">
+                <articulo autor="Mauricio Salgado">
+                    Love is in the air
+                </articulo>
+            </secciones>
+            <contenido enlace=""></contenido>
+
+
+        </periodico>
+
+        <periodico id="P0002" tipo_clase="nacionales" fecha_de_publicacion="2022-04-18">
+                <indice>
+                    ¿Son buenas las acelgas? pag 1-3.
+                    El Rayo gana la liga pag 3-6. 
+                    El crack del 2022 pag 6-9.
+                    El mejor aceite de oliva está en España pag 9-12.
+                    Russia doesnt stop his attacks on Ukraine pag 12-15.
+                </indice>
+
+            <secciones tipo_seccion="opinion">
+                <articulo autor="Israel Serrano">
+                    ¿Son buenas las acelgas?.
+                </articulo>
+            </secciones>
+            <contenido enlace=""></contenido>
+
+            <secciones tipo_seccion="deportes">
+                <articulo autor="Israel Serrano">
+                    El Rayo gana la liga.
+                </articulo>
+            </secciones>
+            <contenido enlace=""></contenido>
+
+            <secciones tipo_seccion="economica">
+                <articulo autor="Israel Serrano">
+                    El crack del 2022.
+                </articulo>
+            </secciones>
+            <contenido enlace=""></contenido>
+
+            <secciones tipo_seccion="nacional">
+                <articulo autor="Israel Serrano">
+                    El mejor aceite de Oliva está en España.
+                </articulo>
+            </secciones>
+            <contenido enlace=""></contenido>
+
+            <secciones tipo_seccion="internacional">
+                <articulo autor="Israel Serrano">
+                    Russia doesnt stop his attacks on Ukraine.
+                </articulo>
+            </secciones>
+            <contenido enlace=""></contenido>
+        </periodico>
+                  
+    </periodicos>
+  
+</Biblioteca>
