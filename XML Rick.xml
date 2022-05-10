@@ -1,0 +1,100 @@
+<Biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="XSD.xsd">
+
+    <libros >
+
+        <libro id="L0001" tipo_clase="novela" paginas="200" > 
+            <titulo>Ruina y terror</titulo>
+            <indice>
+               Principio y fin
+                 
+            </indice>
+            <capitulo paginas_capitulo="200">
+                <titulo>El fin del mundo</titulo>
+                <contenido enlace="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.usatoday.com%2Fstory%2Fnews%2Fnation-now%2F2017%2F09%2F21%2Fword-ending-saturday-here-all-times-world-supposed-end-and-didnt%2F689011001%2F&psig=AOvVaw3y7RpASIdXPUB3VneM-HQt&ust=1652301516159000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCNCwsvvk1fcCFQAAAAAdAAAAABAD"></contenido>
+            </capitulo>
+
+           
+
+            <sinopsis>Todo final tiene un comienzo, no para este universo paralelo donde se envejece a la inversa</sinopsis>
+        </libro>
+
+       
+    <revistas>
+        <revista id="R0001" tipo_clase="caza y pesca" paginas="25">
+            <titulo>El jabalí</titulo>
+            <numero_revista>1</numero_revista>
+            <indice_contenido>
+                Jabalí 1-15
+                Podenco 16-25
+            </indice_contenido>
+
+            <seccion paginas_seccion="15">
+                <titulo>Jabalí</titulo>
+             <contenido enlace=""></contenido>
+            </seccion>
+
+            <seccion paginas_seccion="">
+                <titulo>Podenco</titulo>
+             <contenido enlace=""></contenido>
+            </seccion>
+
+          
+        </revista>
+
+    </revistas>
+   
+    
+    <periodicos>
+        <periodico id="P0001" tipo_clase="internacionales" fecha_de_publicacion="1963-02-01">
+            <indice>
+                La reproducción del percebe pag 1-3.
+                Safari en Afrika pag 3-6. 
+                Rayo Vallecano campeón pag 6-9.
+                El tomate y sus beneficios para el ciudadano pag 9-12.
+                La vieja España a ojos ajenos pag 12-20.
+            </indice>
+            <secciones tipo_seccion="opinion">
+                <articulo autor="El Cigala">
+                    La reproducción del percebe
+                </articulo>
+            </secciones>
+            <contenido enlace="">Contenido</contenido>
+
+            <secciones tipo_seccion="economica">
+                <articulo autor="Pavlo">
+                    La baba del caracol
+                </articulo>
+            </secciones>
+            <contenido enlace="">Contenido</contenido> 
+
+            <secciones tipo_seccion="deportes">
+                <articulo autor="Israel">
+                    Rayo Vallecano campeón
+                </articulo>
+            </secciones>
+            <contenido enlace="https://elpais.com/deportes/2022-05-08/alcaraz-y-zverev-de-martillo-a-martillo.html">Contenido</contenido>
+
+            <secciones tipo_seccion="nacional">
+                <articulo autor="Paco de Lucía">
+                   El tomate y sus beneficios para el ciudadano
+                </articulo>
+            </secciones>
+            <contenido enlace="https://elpais.com/espana/2022-05-08/el-rastro-del-asesino-llega-a-irun.html?autoplay=1">Contenido</contenido>
+
+            <secciones tipo_seccion="internacional">
+                <articulo autor="Benito">
+                    La vieja España a ojos ajenos
+                </articulo>
+            </secciones>
+            <contenido enlace="https://elpais.com/internacional/2022-05-08/ni-dios-sabe-por-que-nos-bombardean.html">Contenido</contenido>
+
+
+        </periodico>
+
+       
+    </periodicos>
+
+    
+   
+</Biblioteca>

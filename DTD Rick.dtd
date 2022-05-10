@@ -1,0 +1,48 @@
+<!-- Libros-->
+<!ELEMENT Biblioteca (libros|revistas|periodicos)+>
+<!ELEMENT libros (libro)+>
+<!ELEMENT libro (titulo|indice|capitulo|sinopsis)+>
+<!ATTLIST libro
+        id CDATA #REQUIRED
+        paginas CDATA #REQUIRED
+        tipo_clase CDATA #REQUIRED>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT indice (#PCDATA)>
+<!ELEMENT capitulo (titulo|contenido)+>
+<!ATTLIST capitulo
+        paginas_capitulo CDATA #REQUIRED>
+<!ELEMENT contenido (#PCDATA)>
+<!ATTLIST contenido
+        enlace CDATA #REQUIRED>
+<!ELEMENT sinopsis (#PCDATA)>
+
+<!-- Revistas-->
+
+<!ELEMENT revistas (revista)*>
+<!ELEMENT revista (titulo|numero_revista|indice_contenido|seccion)*>
+<!ATTLIST revista
+        id CDATA #REQUIRED
+        paginas CDATA #REQUIRED
+        tipo_clase CDATA #REQUIRED>
+<!ELEMENT numero_revista (#PCDATA)>
+<!ELEMENT indice_contenido (#PCDATA)>
+<!ELEMENT seccion (titulo|contenido|titlo)*>
+<!ATTLIST seccion
+        paginas_seccion CDATA #REQUIRED>
+<!ATTLIST contenido
+        enlace CDATA #REQUIRED>
+<!ELEMENT titlo (#PCDATA)>
+
+
+<!-- Periodicos-->
+<!ELEMENT periodicos (periodico)+>
+<!ELEMENT periodico (indice|secciones|contenido)+>
+<!ATTLIST periodico
+        fecha_de_publicacion CDATA #REQUIRED
+        id CDATA #REQUIRED>
+<!ATTLIST periodico tipo_clase (nacionales | internacionales) #REQUIRED>
+<!ELEMENT secciones (articulo)+>
+<!ATTLIST secciones tipo_seccion (economica | opinion | deportes | nacional | internacional) #REQUIRED>
+<!ELEMENT articulo (#PCDATA)>
+<!ATTLIST articulo
+        autor CDATA #REQUIRED>
