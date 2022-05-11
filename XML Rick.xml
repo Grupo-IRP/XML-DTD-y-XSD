@@ -1,7 +1,10 @@
-<Biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:noNamespaceSchemaLocation="XSD.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Biblioteca SYSTEM "DTD Rick.dtd">
 
-    <libros >
+<Biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="XSD Rick.xsd">
+
+    <libros>
 
         <libro id="L0001" tipo_clase="novela" paginas="200" > 
             <titulo>Ruina y terror</titulo>
@@ -9,9 +12,9 @@ xsi:noNamespaceSchemaLocation="XSD.xsd">
                Principio y fin
                  
             </indice>
-            <capitulo paginas_capitulo="200">
+            <capitulo paginas_capitulo="50">
                 <titulo>El fin del mundo</titulo>
-                <contenido enlace="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.usatoday.com%2Fstory%2Fnews%2Fnation-now%2F2017%2F09%2F21%2Fword-ending-saturday-here-all-times-world-supposed-end-and-didnt%2F689011001%2F&psig=AOvVaw3y7RpASIdXPUB3VneM-HQt&ust=1652301516159000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCNCwsvvk1fcCFQAAAAAdAAAAABAD"></contenido>
+                <contenido enlace="https://es.wikipedia.org/wiki/Las_ruinas"></contenido>
             </capitulo>
 
            
@@ -19,9 +22,9 @@ xsi:noNamespaceSchemaLocation="XSD.xsd">
             <sinopsis>Todo final tiene un comienzo, no para este universo paralelo donde se envejece a la inversa</sinopsis>
         </libro>
 
-       
+    </libros>
     <revistas>
-        <revista id="R0001" tipo_clase="caza y pesca" paginas="25">
+        <revista id="R0001" tipo_clase="investigacion" paginas="25">
             <titulo>El jabalí</titulo>
             <numero_revista>1</numero_revista>
             <indice_contenido>
@@ -29,12 +32,12 @@ xsi:noNamespaceSchemaLocation="XSD.xsd">
                 Podenco 16-25
             </indice_contenido>
 
-            <seccion paginas_seccion="15">
+            <seccion paginas_seccion="10">
                 <titulo>Jabalí</titulo>
              <contenido enlace=""></contenido>
             </seccion>
 
-            <seccion paginas_seccion="">
+            <seccion paginas_seccion="10">
                 <titulo>Podenco</titulo>
              <contenido enlace=""></contenido>
             </seccion>
@@ -62,28 +65,28 @@ xsi:noNamespaceSchemaLocation="XSD.xsd">
             <contenido enlace="">Contenido</contenido>
 
             <secciones tipo_seccion="economica">
-                <articulo autor="Pavlo">
+                <articulo autor="Pavlo Morales">
                     La baba del caracol
                 </articulo>
             </secciones>
             <contenido enlace="">Contenido</contenido> 
 
             <secciones tipo_seccion="deportes">
-                <articulo autor="Israel">
+                <articulo autor="Ismael Serrin">
                     Rayo Vallecano campeón
                 </articulo>
             </secciones>
             <contenido enlace="https://elpais.com/deportes/2022-05-08/alcaraz-y-zverev-de-martillo-a-martillo.html">Contenido</contenido>
 
             <secciones tipo_seccion="nacional">
-                <articulo autor="Paco de Lucía">
+                <articulo autor="Paco Lucia">
                    El tomate y sus beneficios para el ciudadano
                 </articulo>
             </secciones>
             <contenido enlace="https://elpais.com/espana/2022-05-08/el-rastro-del-asesino-llega-a-irun.html?autoplay=1">Contenido</contenido>
 
             <secciones tipo_seccion="internacional">
-                <articulo autor="Benito">
+                <articulo autor="Benito K">
                     La vieja España a ojos ajenos
                 </articulo>
             </secciones>

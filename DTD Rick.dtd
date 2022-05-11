@@ -1,3 +1,7 @@
+<!-- Link-->
+<!ATTLIST Biblioteca xmlns:xsi CDATA #REQUIRED>
+<!ATTLIST Biblioteca xsi:noNamespaceSchemaLocation CDATA #REQUIRED>
+
 <!-- Libros-->
 <!ELEMENT Biblioteca (libros|revistas|periodicos)+>
 <!ELEMENT libros (libro)+>
