@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca SYSTEM "Biblioteca_Final.dtd">
+<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="Biblioteca_Final.xsd">
+    <libros>
+        <libro id="L0001" tipo_clase="novela" paginas="50"> 
+            <titulo>El pais del olvido</titulo>
+            <indice>
+                El fin del mundo pag 1-50
+                Destruccion total pag 50-100
+                La grandeza de los olvidados pag 100-150
+                El infierno en la tierra 150-200   
+            </indice>
+            <capitulo paginas_capitulo="50">
+                <titulo>El fin del mundo</titulo>
+                <contenido enlace=""></contenido>
+            </capitulo>
+            <capitulo paginas_capitulo="50">
+                <titulo>Destruccion total</titulo>
+                <contenido enlace=""></contenido>
+            </capitulo>
+            <capitulo paginas_capitulo="50">
+                <titulo>La grandeza de los olvidados</titulo>
+                <contenido enlace=""></contenido>
+            </capitulo>            
+            <capitulo paginas_capitulo="50">
+                <titulo>El infierno en la tierra</titulo>
+                <contenido enlace=""></contenido>
+            </capitulo>
+            <sinopsis>El infierno se ha desatado en la tierra, solamente un único marine será el encargado de acabar
+                con las tropas del infierno que han asaltado la tierra
+            </sinopsis>
+        </libro>
+    </libros>
+    <revistas>
+        <revista id="R0001" tipo_clase="investigacion" paginas="25">
+            <titulo>El jabalí</titulo>
+            <numero_revista>1</numero_revista>
+            <indice_contenido>
+                Jabalí 1-15
+                Podenco 16-25
+            </indice_contenido>
+            <seccion paginas_seccion="10">
+                <titulo>Jabalí</titulo>
+             <contenido enlace=""></contenido>
+            </seccion>
+            <seccion paginas_seccion="10">
+                <titulo>Podenco</titulo>
+             <contenido enlace=""></contenido>
+            </seccion>          
+        </revista>
+    </revistas>
+    <periodicos>
+        <periodico id="P0001" tipo_clase="nacional" fecha_publicacion="2022-02-28">
+            <seccion_periodico tipo_seccion="deportes">
+                <articulo autor="J.Perez">
+                    <titulo_articulo>El Rayo ficha a Mbappé</titulo_articulo>
+                    <contenido_articulo info="enlace"/>
+                </articulo>
+                <articulo autor="Ernesto H.">
+                    <titulo_articulo>Remontada histórica</titulo_articulo>
+                    <contenido_articulo info="enlace"/>
+                </articulo>
+                <articulo autor="Isaac F.">
+                    <titulo_articulo>Hoyo en uno</titulo_articulo>
+                    <contenido_articulo info="enlace"/>
+                </articulo>
+            </seccion_periodico>
+            <seccion_periodico tipo_seccion="opinion">
+                <articulo autor="Hector">
+                    <titulo_articulo>Se contar hasta rojo</titulo_articulo>
+                    <contenido_articulo info="enlace"></contenido_articulo>
+                </articulo>
+            </seccion_periodico>            
+            <indice>
+                Sucesos pag 3
+                Economía pag 6
+                Deportes pag 12
+            </indice>
+        </periodico>
+    </periodicos> 
+</biblioteca>
