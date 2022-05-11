@@ -1,0 +1,53 @@
+<!-- BIBLIOTECA-->
+<!ELEMENT biblioteca (libros|revistas|periodicos)+>
+<!ATTLIST biblioteca xmlns:xsi CDATA #REQUIRED>
+<!ATTLIST biblioteca xsi:noNamespaceSchemaLocation CDATA #REQUIRED>
+
+<!-- LIBROS-->
+<!ELEMENT libros (libro)+>
+<!ELEMENT libro (titulo|indice|capitulo|sinopsis)+>
+<!ATTLIST libro
+    id CDATA #REQUIRED
+    paginas CDATA #REQUIRED
+    tipo_clase CDATA #REQUIRED>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT indice (#PCDATA)>
+<!ELEMENT capitulo (titulo|contenido)+>
+<!ATTLIST capitulo
+        paginas_capitulo CDATA #REQUIRED>
+<!ELEMENT contenido (#PCDATA)>
+<!ATTLIST contenido
+        enlace CDATA #REQUIRED>
+<!ELEMENT sinopsis (#PCDATA)>
+
+<!-- Revistas-->
+<!ELEMENT revistas (revista)*>
+<!ELEMENT revista (titulo|numero_revista|indice_contenido|seccion)*>
+<!ATTLIST revista
+        id CDATA #REQUIRED
+        paginas CDATA #REQUIRED
+        tipo_clase CDATA #REQUIRED>
+<!ELEMENT numero_revista (#PCDATA)>
+<!ELEMENT indice_contenido (#PCDATA)>
+<!ELEMENT seccion (titulo|contenido|titlo)*>
+<!ATTLIST seccion
+        paginas_seccion CDATA #REQUIRED>
+<!ATTLIST contenido
+        enlace CDATA #REQUIRED>
+<!ELEMENT titlo (#PCDATA)>
+
+<!-- Periodicos-->
+<!ELEMENT periodicos (periodico*)>
+<!ELEMENT periodico (seccion_periodico+, indice)>
+<!ATTLIST periodico id ID #REQUIRED>
+<!ATTLIST periodico tipo_clase (nacional | internacional) #REQUIRED>
+<!ATTLIST periodico fecha_publicacion CDATA #REQUIRED>
+
+<!ELEMENT seccion_periodico (articulo*)>
+<!ATTLIST seccion_periodico tipo_seccion (economia | opinion | deportes | nacional | internacional) #REQUIRED>
+
+<!ELEMENT articulo (titulo_articulo, contenido_articulo)>
+<!ATTLIST articulo autor CDATA #REQUIRED> 
+<!ELEMENT titulo_articulo (#PCDATA)>
+<!ELEMENT contenido_articulo (#PCDATA)>
+<!ATTLIST contenido_articulo info CDATA #REQUIRED>
