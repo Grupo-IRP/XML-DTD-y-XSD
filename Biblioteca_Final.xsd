@@ -2,7 +2,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="biblioteca">
         <xs:annotation>
-            <xs:documentation> Libros Revistas Periodicos</xs:documentation>
+            <xs:documentation> En esta biblioteca se va a almacenar libros, revistas y periodicos</xs:documentation>
         </xs:annotation>        
         <xs:complexType>
             <xs:sequence>
@@ -23,14 +23,14 @@
                                                         <xs:complexType>
                                                             <xs:simpleContent>
                                                                 <xs:extension base="xs:string">
-                                                                    <!-- ATRIBUTO ENLACE LIBROS -->
-                                                                    <xs:attribute type="xs:normalizedString" name="enlace" use="optional" />
+                                                                    <!-- ATRIBUTO ENLACE CONTENIDO -->
+                                                                    <xs:attribute name="enlace" use="optional" />   
                                                                 </xs:extension>
                                                             </xs:simpleContent>
                                                         </xs:complexType>
                                                     </xs:element>
                                                 </xs:sequence>
-                                                <!-- ATRIBUTO PAGINAS_CAPITULO LIBROS -->
+                                                <!-- ATRIBUTO PAGINAS_CAPITULO CAPITULO -->
                                                 <xs:attribute name="paginas_capitulo" use="required">
                                                     <xs:simpleType>
                                                         <xs:restriction base="xs:integer">
@@ -43,7 +43,7 @@
                                         </xs:element>
                                         <xs:element type="xs:string" name="sinopsis" />
                                     </xs:sequence>
-                                    <!-- ATRIBUTO ID LIBROS -->
+                                    <!-- ATRIBUTO ID LIBRO -->
                                     <xs:attribute name="id" use="required">
                                         <xs:simpleType>
                                             <xs:restriction base="xs:string">
@@ -51,7 +51,7 @@
                                             </xs:restriction>
                                         </xs:simpleType>
                                     </xs:attribute>
-                                    <!-- ATRIBUTO TIPO_CLASE LIBROS -->
+                                    <!-- ATRIBUTO TIPO_CLASE LIBRO -->
                                     <xs:attribute name="tipo_clase" use="required">
                                         <xs:simpleType>
                                             <xs:restriction base="xs:string">
@@ -61,7 +61,7 @@
                                             </xs:restriction>
                                         </xs:simpleType>
                                     </xs:attribute>
-                                    <!-- ATRIBUTO PAGINAS LIBROS -->
+                                    <!-- ATRIBUTO PAGINAS LIBRO -->
                                     <xs:attribute name="paginas" use="required">
                                         <xs:simpleType>
                                             <xs:restriction base="xs:integer">
@@ -85,17 +85,16 @@
                                         <xs:element type="xs:string" name="titulo" />
                                         <xs:element type="xs:integer" name="numero_revista" />
                                         <xs:element type="xs:string" name="indice_contenido" />
-                                        <xs:element name="seccion" maxOccurs="unbounded" minOccurs="0">
+                                        <xs:element name="seccion" maxOccurs="unbounded">
                                             <xs:complexType>
                                                 <xs:sequence>
-                                                    <xs:element type="xs:string" name="titulo" minOccurs="0" />
-                                                    <xs:element type="xs:string" name="titlo" minOccurs="0" />
+                                                    <xs:element type="xs:string" name="titulo"/>                                                    
                                                     <xs:element name="contenido">
                                                         <xs:complexType>
                                                             <xs:simpleContent>
                                                                 <xs:extension base="xs:string">
                                                                     <!-- ATRIBUTO 1 -->
-                                                                    <xs:attribute type="xs:string" name="enlace" use="optional" />
+                                                                    <xs:attribute name="enlace" use="optional" />
                                                                 </xs:extension>
                                                             </xs:simpleContent>
                                                         </xs:complexType>
@@ -177,7 +176,7 @@
                                                 <xs:attribute name="tipo_seccion">
                                                     <xs:simpleType>
                                                         <xs:restriction base="xs:string">
-                                                            <xs:enumeration value="ecoomia"></xs:enumeration>
+                                                            <xs:enumeration value="economia"></xs:enumeration>
                                                             <xs:enumeration value="opinion"></xs:enumeration>
                                                             <xs:enumeration value="deportes"></xs:enumeration>
                                                             <xs:enumeration value="nacional"></xs:enumeration>
